@@ -35,3 +35,11 @@ ion-footer a {
   justify-content: center !important;
 }
 
+ion-thumbnail img {
+  object-fit: contain; /* Zeigt das ganze Bild an, auch wenn es kleiner als das Thumbnail ist */
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
