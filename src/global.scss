@@ -35,3 +35,29 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+/* Default Light Theme */
+/* Global Styling */
+:root {
+    --ion-background-color: #fff;
+    --ion-text-color: #000;
+    --ion-toolbar-background: #fff; /* Light Mode Hintergrundfarbe für Toolbar */
+    --ion-toolbar-color: #000; /* Textfarbe in Toolbar für Light Mode */
+    --ion-card-background: #fff;
+    --ion-card-title-color: #000;
+    --ion-card-content-color: #333;
+    --ion-card-border-color: #ddd;
+  }
+  
+  .dark-theme {
+    --ion-background-color: #121212;
+    --ion-text-color: #e0e0e0;
+    --ion-toolbar-background: #121212; /* Gleiche Farbe wie der Hintergrund im Dark Mode */
+    --ion-toolbar-color: #e0e0e0; /* Textfarbe in Toolbar für Dark Mode */
+    --ion-card-background: #1e1e1e;
+    --ion-card-title-color: #e0e0e0;
+    --ion-card-content-color: #b0b0b0;
+    --ion-card-border-color: #333;
+  }
+  

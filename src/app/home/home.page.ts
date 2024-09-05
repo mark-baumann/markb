@@ -7,6 +7,19 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  isDarkMode: boolean = true; // Setze Dark Mode als Standard
 
+  constructor() {
+    this.applyInitialTheme();
+  }
+
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    document.body.classList.toggle('dark-theme', this.isDarkMode);
+  }
+
+  applyInitialTheme() {
+    // Wende die Dark Theme Klasse standardmäßig an
+    document.body.classList.add('dark-theme');
+  }
 }
