@@ -39,25 +39,29 @@
 
 /* Default Light Theme */
 /* Global Styling */
+/* Default Light Theme */
+/* Global Styling */
 :root {
     --ion-background-color: #fff;
     --ion-text-color: #000;
-    --ion-toolbar-background: #fff; /* Light Mode Hintergrundfarbe für Toolbar */
-    --ion-toolbar-color: #000; /* Textfarbe in Toolbar für Light Mode */
+    --ion-toolbar-background: #fff; 
+    --ion-toolbar-color: #000; 
     --ion-card-background: #fff;
-    --ion-card-title-color: #000;
-    --ion-card-content-color: #333;
-    --ion-card-border-color: #ddd;
+    --ion-card-title-color: #000; 
   }
   
   .dark-theme {
     --ion-background-color: #121212;
     --ion-text-color: #e0e0e0;
-    --ion-toolbar-background: #121212; /* Gleiche Farbe wie der Hintergrund im Dark Mode */
-    --ion-toolbar-color: #e0e0e0; /* Textfarbe in Toolbar für Dark Mode */
+    --ion-toolbar-background: #121212; 
+    --ion-toolbar-color: #e0e0e0; 
     --ion-card-background: #1e1e1e;
-    --ion-card-title-color: #e0e0e0;
-    --ion-card-content-color: #b0b0b0;
-    --ion-card-border-color: #333;
+    --ion-card-title-color: #e0e0e0; 
+    
+  }
+  
+  /* Spezifische Styles für ion-card-title */
+  ion-card-title {
+    color: var(--ion-card-title-color) !important;
   }
   
