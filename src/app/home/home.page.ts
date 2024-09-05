@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   isDarkMode: boolean = true; 
+  buttonColor: string = 'light';
 
   constructor() {
     this.applyInitialTheme();
@@ -16,6 +17,7 @@ export class HomePage {
   toggleTheme() {
     this.isDarkMode = !this.isDarkMode;
     document.body.classList.toggle('dark-theme', this.isDarkMode);
+    this.updateButtonColor();
   }
 
   applyInitialTheme() {
@@ -23,5 +25,9 @@ export class HomePage {
     document.body.classList.add('dark-theme');
   }
 
+
+  updateButtonColor() {
+    this.buttonColor = this.isDarkMode ? 'light' : 'dark';
+  }
 
 }

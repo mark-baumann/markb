@@ -20,4 +20,18 @@ ion-card-content a {
 }
 
 
+ion-footer {
+  text-align: center; /* Zentriert den Text im Footer */
+  background-color: var(--ion-background-color); /* Hintergrundfarbe entsprechend dem Theme */
+}
+
+ion-footer a {
+  color: var(--ion-text-color); /* Linkfarbe entsprechend dem Theme */
+  text-decoration: none; /* Keine Unterstreichung */
+}
+
+.custom-button{
+  display: flex;
+  justify-content: center !important;
+}
 
