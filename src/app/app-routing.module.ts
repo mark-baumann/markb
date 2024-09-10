@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'impressum',
+    loadChildren: () => import('./impressum/impressum.module').then( m => m.ImpressumPageModule)
+  },
 ];
 
 @NgModule({
