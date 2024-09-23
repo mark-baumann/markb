@@ -42,4 +42,12 @@ ion-thumbnail img {
   display: block;
 }
 
+ion-icon {
+  color: var(--ion-text-color); /* Standard Textfarbe des Themes */
+}
+
+/* Dark Mode spezifische Anpassung */
+body.dark ion-icon {
+  color: white; /* Icons in Weiß, wenn Dark Mode aktiv ist */
+}
 
