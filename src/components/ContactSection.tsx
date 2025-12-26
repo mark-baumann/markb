@@ -33,7 +33,7 @@ const ContactSection = () => {
 
             <div className="flex flex-wrap gap-4">
               <Button variant="outline" size="lg" asChild>
-                <a href="mailto:kontakt@markbaumann.de">
+                <a href="mailto:kontakt@markb.de">
                   <Mail className="h-5 w-5 mr-2" />
                   E-Mail schreiben
                 </a>
