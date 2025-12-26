@@ -1,6 +1,7 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import markHero from "@/assets/mark-hero.jpg";
+import markHeroWebp from "@/assets/mark-hero.webp";
 
 const HeroSection = () => {
   return (
@@ -33,12 +34,15 @@ const HeroSection = () => {
           <div className="order-1 lg:order-2 flex justify-center">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-border to-transparent rounded-full blur-2xl opacity-50" />
-              <img
-                src={markHero}
-                alt="Mark Baumann - IT-Berater und Webentwickler aus Deutschland"
-                className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-border shadow-2xl"
-                loading="eager"
-              />
+              <picture>
+                <source srcSet={markHeroWebp} type="image/webp" />
+                <img
+                  src={markHero}
+                  alt="Mark Baumann - IT-Berater und Webentwickler aus Deutschland"
+                  className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-border shadow-2xl"
+                  loading="eager"
+                />
+              </picture>
             </div>
           </div>
         </div>

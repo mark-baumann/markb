@@ -1,12 +1,16 @@
-const skills = [
-  { name: "Python", level: 90 },
-  { name: "React", level: 85 },
-  { name: "Docker", level: 80 },
-  { name: "n8n", level: 85 },
-  { name: "TypeScript", level: 80 },
-  { name: "Node.js", level: 75 },
-  { name: "Linux", level: 85 },
-  { name: "Git", level: 90 },
+const skillCategories = [
+  {
+    category: "Programmierung",
+    skills: ["Python", "TypeScript", "JavaScript", "React", "Node.js"]
+  },
+  {
+    category: "DevOps & Tools",
+    skills: ["Docker", "Git", "Linux", "n8n", "CI/CD"]
+  },
+  {
+    category: "Weitere",
+    skills: ["REST APIs", "Datenbanken", "Webentwicklung", "IT-Beratung"]
+  }
 ];
 
 const SkillsSection = () => {
@@ -22,20 +26,24 @@ const SkillsSection = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <div className="grid gap-6">
-            {skills.map((skill, index) => (
-              <div key={index} className="group">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="font-medium text-foreground">{skill.name}</span>
-                  <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                </div>
-                <div className="h-2 bg-border rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-primary rounded-full transition-all duration-1000 ease-out group-hover:bg-foreground"
-                    style={{ width: `${skill.level}%` }}
-                  />
-                </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            {skillCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="space-y-4">
+                <h3 className="text-xl font-semibold text-foreground mb-4">
+                  {category.category}
+                </h3>
+                <ul className="space-y-2">
+                  {category.skills.map((skill, skillIndex) => (
+                    <li
+                      key={skillIndex}
+                      className="flex items-center text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <span className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></span>
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import markCta from "@/assets/mark-cta.jpg";
+import markCtaWebp from "@/assets/mark-cta.webp";
 
 const CtaSection = () => {
   return (
@@ -8,12 +9,15 @@ const CtaSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
           <div className="flex justify-center lg:justify-start">
-            <img
-              src={markCta}
-              alt="Mark Baumann - Bereit für Ihr nächstes Projekt"
-              className="w-72 h-96 md:w-80 md:h-[28rem] object-cover rounded-2xl border-4 border-border shadow-xl"
-              loading="lazy"
-            />
+            <picture>
+              <source srcSet={markCtaWebp} type="image/webp" />
+              <img
+                src={markCta}
+                alt="Mark Baumann - Bereit für Ihr nächstes Projekt"
+                className="w-72 h-96 md:w-80 md:h-[28rem] object-cover rounded-2xl border-4 border-border shadow-xl"
+                loading="lazy"
+              />
+            </picture>
           </div>
           
           <div className="text-center lg:text-left">

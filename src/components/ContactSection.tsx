@@ -1,6 +1,7 @@
 import { MapPin, Mail, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import markContact from "@/assets/mark-contact.jpg";
+import markContactWebp from "@/assets/mark-contact.webp";
 
 const ContactSection = () => {
   return (
@@ -53,12 +54,15 @@ const ContactSection = () => {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <img
-              src={markContact}
-              alt="Mark Baumann - IT-Berater in Berlin, Deutschland"
-              className="w-72 h-96 md:w-80 md:h-[28rem] object-cover rounded-2xl border-4 border-border shadow-xl"
-              loading="lazy"
-            />
+            <picture>
+              <source srcSet={markContactWebp} type="image/webp" />
+              <img
+                src={markContact}
+                alt="Mark Baumann - IT-Berater in Berlin, Deutschland"
+                className="w-72 h-96 md:w-80 md:h-[28rem] object-cover rounded-2xl border-4 border-border shadow-xl"
+                loading="lazy"
+              />
+            </picture>
           </div>
         </div>
       </div>
