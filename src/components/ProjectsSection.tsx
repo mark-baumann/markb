@@ -24,7 +24,7 @@ const ProjectsSection = () => {
     const fetchRepos = async () => {
       try {
         const response = await fetch(
-          "https://api.github.com/users/mark-baumann/repos?sort=updated&per_page=6"
+          "https://api.github.com/users/mark-baumann/repos?sort=updated&per_page=100"
         );
         if (!response.ok) throw new Error("Fehler beim Laden der Projekte");
         const data = await response.json();
@@ -53,7 +53,7 @@ const ProjectsSection = () => {
 
         {loading ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[...Array(6)].map((_, i) => (
+            {[...Array(12)].map((_, i) => (
               <Card key={i} className="bg-card border-border">
                 <CardContent className="p-6">
                   <Skeleton className="h-6 w-3/4 mb-4" />
